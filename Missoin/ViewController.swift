@@ -25,12 +25,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        //クラスで書いた順でないとエラーになる
         nameArray.append(Name(number: "１番目", name: "A"))
         nameArray.append(Name(number: "２番目",name: "B"))
         nameArray.append(Name(number: "３番目",name: "C"))
         nameArray.append(Name(number: "4番目",name: "D"))
-        nameArray.append(Name(number: "5番目",name: "C"))
+        nameArray.append(Name(number: "5番目",name: "E"))
         
         
         setUI()
@@ -40,14 +40,14 @@ class ViewController: UIViewController {
     @IBAction func pre() {
         index = index - 1
         if index < 0 {
-            index = 4
+            index = nameArray.count - 1
         }
         setUI()
     }
     
     @IBAction func next() {
         index = index + 1
-        if index == 5 {
+        if index == nameArray.count {
             index = 0
         }
         setUI()
