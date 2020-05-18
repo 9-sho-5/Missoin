@@ -54,24 +54,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func one() {
-        nameLabel.text = nameArray[0].name
-        numberLabel.text = nameArray[0].number
-        
         index = 0
+        
+        setUI()
     }
 
     @IBAction func two() {
-        nameLabel.text = nameArray[1].name
-        numberLabel.text = nameArray[1].number
-        
         index = 1
+        
+        setUI()
     }
     
     @IBAction func three() {
-        nameLabel.text = nameArray[2].name
-        numberLabel.text = nameArray[2].number
-        
         index = 2
+        
+        setUI()
     }
     
 }
